@@ -1,8 +1,8 @@
 public class Tisch
 { 
-    public String material = "UNKN";
-    public boolean ausziehbar = false;
-    public int höhe = 0;
+    private String material = "UNKN";
+    private boolean ausziehbar = false;
+    private int höhe = 0;
     
     
     public Tisch(String neuMaterial, boolean neuAusziehbar, int neuHöhe)
@@ -47,9 +47,6 @@ public class Tisch
     
     public void printTisch()
     {
-        System.out.println(material + "Tisch: " + höhe + "cm - " + ausziehbar);
+        System.out.println(material + " Tisch: " + höhe + "cm - " + ausziehbar);
     }
-    
-    
-    
 }
