@@ -7,9 +7,9 @@ public class Tisch
     
     public Tisch(String neuMaterial, int neuHoehe, boolean neuAusziehbar)
     {
-        material = neuMaterial;
-        hoehe = neuHoehe;
-        ausziehbar = neuAusziehbar;
+        this.material = neuMaterial;
+        this.hoehe = neuHoehe;
+        this.ausziehbar = neuAusziehbar;
     }
     
     public String getMaterial()
