@@ -1,21 +1,25 @@
+
 public class Tisch
 { 
     private String material = "UNKN";
+    private int hoehe = 0;
     private boolean ausziehbar = false;
-    private int höhe = 0;
     
-    
-    public Tisch(String neuMaterial, boolean neuAusziehbar, int neuHöhe)
+    public Tisch(String neuMaterial, int neuHoehe, boolean neuAusziehbar)
     {
-        material =  neuMaterial;
+        material = neuMaterial;
+        hoehe = neuHoehe;
         ausziehbar = neuAusziehbar;
-        höhe = neuHöhe;
     }
-    
     
     public String getMaterial()
     {
         return material;
+    }
+    
+    public int getHoehe()
+    {
+        return hoehe;
     }
     
     public boolean getAusziehbar()
@@ -23,15 +27,14 @@ public class Tisch
         return ausziehbar;
     }
     
-    public int getHöhe()
-    {
-        return höhe;
-    }
-    
-    
     public void setMaterial(String neuMaterial)
     {
         material = neuMaterial;
+    }
+    
+    public void setHoehe(int neuHoehe)
+    {
+        hoehe = neuHoehe;
     }
     
     public void setAusziehbar(boolean neuAusziehbar)
@@ -39,14 +42,9 @@ public class Tisch
         ausziehbar = neuAusziehbar;
     }
     
-    public void setHöhe(int neuHöhe)
-    {
-        höhe = neuHöhe;
-    }
-    
-    
     public void printTisch()
     {
-        System.out.println(material + " Tisch: " + höhe + "cm - " + ausziehbar);
+        System.out.println(material + " Tisch: " + hoehe + " cm - " + ausziehbar);
     }
 }
+
