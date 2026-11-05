@@ -1,4 +1,4 @@
-
+//Aufgabe
 public class Tisch
 { 
     private String material = "UNKN";
