@@ -1,50 +1,57 @@
-//Aufgabe
-public class Tisch
-{ 
-    private String material = "UNKN";
-    private int hoehe = 0;
-    private boolean ausziehbar = false;
-    
-    public Tisch(String neuMaterial, int neuHoehe, boolean neuAusziehbar)
+
+public class Tisch 
+{
+    private String Material = "UNKN";
+    private int Hoehe = 0;
+    private boolean Ausziehbar = false;
+
+    public Tisch (String neuMaterial, int neuHoehe, boolean neuAusziehbar)
     {
-        material = neuMaterial;
-        hoehe = neuHoehe;
-        ausziehbar = neuAusziehbar;
+        setMaterial(neuMaterial);
+        setHoehe(neuHoehe);
+        setAusziehbar(neuAusziehbar);
     }
-    
+
     public String getMaterial()
     {
-        return material;
+        return Material;
     }
-    
+
     public int getHoehe()
     {
-        return hoehe;
+        return Hoehe;
     }
-    
+
     public boolean getAusziehbar()
     {
-        return ausziehbar;
+        return Ausziehbar;
     }
-    
-    public void setMaterial(String neuMaterial)
+
+    public void setMaterial (String neuMaterial)
     {
-        material = neuMaterial;
+        Material = neuMaterial;
     }
-    
-    public void setHoehe(int neuHoehe)
+
+    public void setHoehe (int neuHoehe)
     {
-        hoehe = neuHoehe;
+        if (neuHoehe >= 0 && neuHoehe <= 300)
+        {
+            Hoehe = neuHoehe;
+        }
+        else
+        {
+            System.out.println("Fehler: Höhe muss zwischen 0 und 300 liegen!");
+            Hoehe = 0;
+        }
     }
-    
-    public void setAusziehbar(boolean neuAusziehbar)
+
+    public void setAusziehbar (boolean neuAusziehbar)
     {
-        ausziehbar = neuAusziehbar;
+        Ausziehbar = neuAusziehbar;
     }
-    
+
     public void printTisch()
     {
-        System.out.println(material + " Tisch: " + hoehe + " cm - " + ausziehbar);
+        System.out.println(Material + " , " + Hoehe + " , " + Ausziehbar);
     }
 }
-
